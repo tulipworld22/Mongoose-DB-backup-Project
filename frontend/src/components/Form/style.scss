@@ -1,0 +1,89 @@
+.form {
+    width: 100%;
+    padding: 20px 50px 0 50px;
+    color: $black;
+
+    .form-title {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.8rem;
+        color: $blue;
+    }
+
+    .form-content {
+        .item {
+
+            label {
+                display: inline-block;
+                margin: 10px 20px 10px 0px;
+                font-size: 1.3rem;
+                font-weight: 600;
+
+                .required {
+                    color: red;
+                    text-align: center;
+                    display: inline-block;
+                    padding: 0 5px;
+                }
+            }
+
+            .input-field {
+                width: 100%;
+                padding: 8px 20px;
+                font-size: 1.2rem;
+                border: 1px solid rgba(0, 0, 0, 0.26);
+            }
+
+            input:disabled {
+                background-color: #eeeeee;
+                cursor: not-allowed;
+            }
+
+            .error-message {
+                color: red;
+            }
+
+            .error-input {
+                //border-color: red;
+                //outline: none;
+            }
+
+            .Select-control {
+                border: 1px solid rgba(0, 0, 0, 0.26);
+                font-size: 1.2rem;
+                border-radius: 0px;
+            }
+
+        }
+    }
+
+    .form-footer {
+        width: 100%;
+
+        .button-left, .button-right, .button-middle {
+            width: 135px;
+            margin-top: 30px;
+        }
+
+        .button-left {
+            float: left;
+        }
+
+        .button-right {
+            float: right;
+        }
+
+        .button-middle {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+        }
+
+        .error-message {
+            margin-top: 10px;
+            color: red;
+            text-align: center;
+        }
+    }
+}

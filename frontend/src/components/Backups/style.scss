@@ -1,0 +1,88 @@
+.backup-overview {
+   width: 100%;
+   height: 100%;
+
+   .backup-grid-wrapper {
+
+      width: 50%;
+      padding: 20px;
+      display: inline-block;
+
+      @media screen and (max-width: 788px) {
+         width: 100%;
+      }
+
+      .backup-grid {
+         padding: 10px;
+         font-size: 1rem;
+         border-radius: 5px;
+         border: 1px solid rgba(10, 10, 10, .2);
+         transition: all .2s;
+
+         &:hover {
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+         }
+
+         .backup-grid-overview {
+
+            .backup-id {
+               display: block;
+               padding-top: 5px;
+               color: $blue;
+               font-size: 1.5rem;
+            }
+
+            .status-wrapper {
+               height: 20px;;
+               width: 35%;
+               display: inline-block;
+            }
+
+            .numbers-wrapper {
+               display: inline-flex;
+               height: 20px;
+               width: 65%;
+               justify-content: space-between;
+
+               .number {
+
+                  .name {
+                     display: inline-block;
+                     padding-right: 5px;
+                     text-transform: uppercase;
+                  }
+
+                  .value {
+                     display: inline-block;
+                  }
+
+               }
+            }
+         }
+
+         .item {
+            padding: 4px 0;
+
+            > * {
+               display: inline-block;
+               padding-right: 5px;
+            }
+
+            .key {
+               text-transform: capitalize;
+               font-weight: 400;
+            }
+
+            .value {
+               color: #8899a6;
+            }
+
+            .result {
+
+            }
+
+         }
+      }
+
+   }
+}

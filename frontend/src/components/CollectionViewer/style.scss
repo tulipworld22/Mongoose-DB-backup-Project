@@ -1,0 +1,144 @@
+.data-viewer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 1200px;
+    height: 80%;
+    max-height: 1000px;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+
+    &,
+    & * {
+       box-sizing: border-box;
+    }
+
+    .data-content {
+        width: 100%;
+        height: 100%;
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 10px;
+            color: $dark-grey;
+            text-align: center;
+        }
+
+        .content-pagination {
+            padding: 10px;
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, .2);
+        }
+
+        .content-text {
+            width: 100%;
+            height: calc(100% - 80px);
+
+            textarea {
+                width: 100%;
+                height: 100%;
+                resize: none;
+                font-size: 1.1rem;
+                outline: none;
+                border: none;
+                border-top: 1px solid rgba(0, 0, 0, .2);
+                background: white;
+            }
+        }
+
+        .content-query {
+            padding: 12px;
+            height: 40px;
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+
+            .query-text {
+                display: inline-block;
+                line-height: 20px;
+            }
+
+            .query-search-field {
+                display: inline-block;
+                width: calc(100% - 60px);
+                padding: 0 10px;
+                position: relative;
+
+                &::after {
+                  content: attr(data-error);
+                  position: absolute;
+                  bottom: -10px;
+                  left: 10px;
+                  color: $red;
+                  text-transform: lowercase;
+                  font-size: 9px;
+                }
+
+                input {
+                  padding: 4px;
+                  display: inline-block;
+                  width: 100%;
+                  font-size: 1.3rem;
+                  outline: none;
+                  border: 1px solid #aaa;
+                  border-radius: 5px;
+                }
+            }
+
+            .query-search-button {
+                padding: 5px 8px;
+            }
+        }
+    }
+
+    .viewer-loading {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+
+       .loader {
+         border: 3px solid #aaa;
+         border-top-color: #333;
+         border-radius: 50%;
+         height: 120px;
+         width: 120px;
+         animation: spin 2s linear infinite;
+       }
+
+       .text {
+          width: 100%;
+          margin-top: 10px;
+          display: inline-block;
+          text-align: center;
+       }
+
+    }
+
+    .viewer-error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .error-message {
+           color: red;
+        }
+    }
+
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

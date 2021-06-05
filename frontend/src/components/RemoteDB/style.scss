@@ -1,0 +1,85 @@
+.original-database {
+
+    border: $border;
+
+    .header {
+      height: 50px;
+      border-bottom: $border;
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        padding-left: 10px;
+        color: $light-black;
+        font-size: 1.5rem;
+        line-height: 50px;
+      }
+
+      .db-refresh {
+        padding: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .text {
+          font-style: italic;
+          padding-right: 10px;
+          color: $grey;
+        }
+
+        i {
+          color: $blue;
+          transition: all .25s ease-in-out;
+
+          &:hover {
+             color: $light-blue;
+          }
+        }
+
+        .updating {
+           animation: rotate .8s linear infinite;
+        }
+      }
+    }
+
+    .database {
+         border-collapse: collapse;
+
+         .database-name {
+            padding: 10px;
+
+            &:not(:last-child) {
+              border-bottom: 1px solid rgba(0, 0, 0, .12);
+            }
+         }
+
+        .database-details {
+
+            .database-collection {
+                padding: 10px;
+
+                &:hover {
+                  background-color: #ddd;
+                }
+
+                input {
+                  margin-right: 20px;
+                }
+
+                .collection-name {
+                }
+
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
